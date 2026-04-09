@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Notes App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Simple Notes App</h1>
+        <h2>Welcome to the notes app</h2>
+
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+
+        <form method="POST">
+            <label for="note">Enter your note:</label>
+            <textarea name="note" id="note" placeholder="Write your note here..."></textarea>
+            <button type="submit">Add Note</button>
+        </form>
+
+        {% if notes %}
+            <div class="notes-section">
+                <h3>Notes</h3>
+                <ol>
+                    {% for note in notes %}
+                        <li>{{ note }}</li>
+                    {% endfor %}
+                </ol>
+            </div>
+        {% endif %}
+    </div>
+<!-- <script src="{{ url_for('static', filename='script.js') }}"></script> -->
+</body>
+</html>
