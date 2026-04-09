@@ -16,6 +16,8 @@ A basic notes web app built using Flask. Users can add notes and view them on th
 - JavaScript
 
 ## Project Structure
+
+```
 simple-notes-app/
 ├── app.py
 ├── README.md
@@ -24,6 +26,7 @@ simple-notes-app/
 │   └── script.js
 └── templates/
     └── index.html
+```
 
 ## How to Run
 1. Clone the repository
